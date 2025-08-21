@@ -13,20 +13,7 @@
     }
 
     /* Navbar */
-    .navbar a {
-  position: relative;
-  text-decoration: none;
-  color: #333;
-  margin: 0 12px;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 25px;
-  transition: color 0.3s ease;
-  overflow: hidden;
-}
-
-/* The "placeholder background" */
-.navbar {
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -79,26 +66,6 @@
     }
 
     /* Hero Section */
-    .hero-text a {
-  background: linear-gradient(135deg, #d4af37, #c5a880);
-  color: white;
-  padding: 14px 32px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  box-shadow: 0 6px 15px rgba(197,168,128,0.3);
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.hero-text a:hover {
-  background: linear-gradient(135deg, #e0c068, #b08d57);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(197,168,128,0.5);
-}
-
     .hero {
       height: 90vh;
       background: url('https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
@@ -136,17 +103,23 @@
     }
 
     .hero-text a {
-      background: #c5a880;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
       color: white;
-      padding: 12px 28px;
-      border-radius: 30px;
+      padding: 14px 32px;
+      border-radius: 40px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 15px rgba(197,168,128,0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
     }
 
     .hero-text a:hover {
-      background: #a8875a;
+      background: linear-gradient(135deg, #e0c068, #b08d57);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(197,168,128,0.5);
     }
 
     /* Featured Products */
@@ -233,32 +206,34 @@
     </div>
   </div>
 
+  <!-- Featured Watches -->
   <!-- Featured Products -->
-  <section class="featured">
-    <h2>Featured Pieces</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Product">
-        <h3>Luxury Watch</h3>
-        <p>$299.99</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Product">
-        <h3>Classic Handbag</h3>
-        <p>$499.99</p>
-      </div>
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="Product">
-        <h3>Minimalist Shoes</h3>
-        <p>$149.99</p>
-      </div>
+<section class="featured">
+  <h2>Featured Watches</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Luxury Watch">
+      <h3>Luxury Watch</h3>
+      <p>$299.99</p>
     </div>
-  </section>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=600&q=80" alt="Classic Watch">
+      <h3>Classic Watch</h3>
+      <p>$349.99</p>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Minimalist Watch">
+      <h3>Minimalist Watch</h3>
+      <p>$199.99</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <!-- <footer>
-    <p>&copy; 2025 MyStore. All Rights Reserved.</p>
-  </footer> -->
+  <footer>
+    <p>&copy; 2025 SERENITY ELYSIAN WATCH. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
