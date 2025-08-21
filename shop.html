@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore | Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fdfcf9;
+      color: #2a2a2a;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 20px 60px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      color: #222;
+      letter-spacing: 1px;
+    }
+
+    .navbar a {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      margin: 0 14px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 25px;
+      transition: color 0.3s ease;
+      overflow: hidden;
+    }
+
+    .navbar a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+      z-index: -1;
+    }
+
+    .navbar a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      height: 40vh;
+      background: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* Shop Section */
+    .shop {
+      padding: 100px 80px;
+      text-align: center;
+    }
+
+    .shop h2 {
+      font-size: 2.5rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 50px;
+      color: #1f1f1f;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .product img {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      font-family: "Georgia", serif;
+    }
+
+    .product-info p {
+      color: #c5a880;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #b8962e, #b59a70);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 35px;
+      margin-top: 70px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SERENITY ELYSIAN WATCH</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collection.html">Collection</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Shop Watches</h1>
+      <p>Refined timepieces for every occasion</p>
+    </div>
+  </div>
+
+  <!-- Shop -->
+  <section class="shop">
+    <h2>Our Selection</h2>
+    <div class="grid">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Classic Watch">
+        <div class="product-info">
+          <h3>Classic Leather Watch</h3>
+          <p>$299.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=600&q=80" alt="Chronograph Watch">
+        <div class="product-info">
+          <h3>Chronograph Edition</h3>
+          <p>$459.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1526040652367-ac003a0475fe?auto=format&fit=crop&w=600&q=80" alt="Minimalist Watch">
+        <div class="product-info">
+          <h3>Minimalist Steel</h3>
+          <p>$249.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Luxury Gold Watch">
+        <div class="product-info">
+          <h3>Luxury Gold Timepiece</h3>
+          <p>$699.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=600&q=80" alt="Skeleton Watch">
+        <div class="product-info">
+          <h3>Skeleton Mechanical</h3>
+          <p>$899.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=600&q=80" alt="Smart Watch">
+        <div class="product-info">
+          <h3>Smart Hybrid Watch</h3>
+          <p>$399.99</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+</body>
+</html>

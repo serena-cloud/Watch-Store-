@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore | About</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fdfcf9;
+      color: #2a2a2a;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 20px 60px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      color: #222;
+      letter-spacing: 1px;
+    }
+
+    .navbar a {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      margin: 0 14px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 25px;
+      transition: color 0.3s ease;
+      overflow: hidden;
+    }
+
+    .navbar a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+      z-index: -1;
+    }
+
+    .navbar a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero-text h1 {
+      font-size: 3.8rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* About Section */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 100px 80px;
+      align-items: center;
+    }
+
+    .about-section img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .about-text h2 {
+      font-size: 2.4rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 25px;
+      color: #1f1f1f;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    /* Values Section */
+    .values {
+      text-align: center;
+      padding: 90px 70px;
+      background: #fbfaf7;
+    }
+
+    .values h2 {
+      font-size: 2.3rem;
+      margin-bottom: 50px;
+      font-family: "Georgia", serif;
+      color: #222;
+    }
+
+    .value-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #c5a880;
+      font-family: "Georgia", serif;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 35px;
+      margin-top: 70px;
+      font-size: 0.95rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SERENITY ELYSIAN WATCH</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collection.html">Collection</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Our Story</h1>
+      <p>Crafting elegance since 2025</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Where Elegance Meets Timelessness</h2>
+      <p>At MyStore, we believe in creating more than products – we create experiences. 
+      Every piece is carefully crafted with precision, passion, and purpose, designed 
+      to accompany you through life’s most meaningful moments.</p>
+
+      <p>Rooted in heritage and refined with modern sophistication, our collections 
+      represent the harmony of tradition and innovation.</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=800&q=80" alt="Our Brand">
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values">
+    <h2>Our Values</h2>
+    <div class="value-cards">
+      <div class="card">
+        <h3>Craftsmanship</h3>
+        <p>We celebrate artisanal excellence, ensuring every detail speaks of quality and care.</p>
+      </div>
+      <div class="card">
+        <h3>Timelessness</h3>
+        <p>Our designs are made to last — not just in durability, but in style and relevance.</p>
+      </div>
+      <div class="card">
+        <h3>Integrity</h3>
+        <p>From sourcing to delivery, we uphold the highest standards of ethics and transparency.</p>
+      </div>
+    </div>
+  </section>
+
+  
+</body>
+</html>

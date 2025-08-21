@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore | Contact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fdfcf9;
+      color: #2a2a2a;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 20px 60px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      color: #222;
+      letter-spacing: 1px;
+    }
+
+    .navbar a {
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      margin: 0 14px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 25px;
+      transition: color 0.3s ease;
+      overflow: hidden;
+    }
+
+    .navbar a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+      z-index: -1;
+    }
+
+    .navbar a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      height: 40vh;
+      background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: "Georgia", serif;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* Contact Section */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 100px 80px;
+    }
+
+    .contact-info {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .contact-info h2 {
+      font-family: "Georgia", serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact-form h2 {
+      font-family: "Georgia", serif;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus, 
+    .contact-form textarea:focus {
+      border-color: #d4af37;
+      outline: none;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4af37, #c5a880);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #b8962e, #b59a70);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 35px;
+      margin-top: 70px;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SERENITY ELYSIAN WATCH</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collection.html">Collection</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+      <p><strong>Address:</strong> Lucknow,Uttar Pradesh,India</p>
+      <p><strong>Phone:</strong> +91 9250265626</p>
+      <p><strong>Email:</strong> shrishti@mystore.com</p>
+      <p>Our team is available Monday–Friday, 9AM–6PM EST.</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+
+</body>
+</html>
